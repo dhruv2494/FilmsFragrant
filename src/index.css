@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background:#0C1A1A;
+}
+.card{
+    border-radius: 5%;
+}
+::-webkit-scrollbar {
+    display: none;
+    color: white;
+}
+.DetailDiscription{
+    max-height: 50vh;
+    min-height: 20vh;
+}
+.img{
+    /* border: 5px solid red; */
+}
+/* .lpage{
+    max-height: 20vh;
+} */
+.cimg{
+    max-height: 40vh;
+}
+#cimgh{
+    display: none;
+}
+.bd{
+    border: 1px solid rgb(34, 197, 94);
+}
