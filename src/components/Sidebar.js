@@ -10,7 +10,7 @@ const Sidebar = () => {
     <h1
       hidden
       id="udetail"
-      className=" md:w-1/5 w-4/5 text-white h-screen sticky top-11 lpage pt-5 bg-gray-800"
+      className=" md:w-1/5 w-2/5 text-white h-screen sticky top-11 lpage pt-5 bg-gray-800"
     >
       <div className=" flex justify-center text-center flex-col">
         <h1 className="text-xl">
@@ -39,6 +39,7 @@ const Sidebar = () => {
               userName: "",
               mobile: "",
               password: "",
+              userid:""
             });
             document.getElementById("udetail").hidden =
               !document.getElementById("udetail").hidden;

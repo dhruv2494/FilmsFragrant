@@ -13,7 +13,7 @@ const Header = () => {
         <Link to={"/login"}>
           <span className=" rounded-md flex items-center text-3xl">
             <Button>
-              <span className="text-white ">Login</span>
+              <span className="text-orange-500 ">Login</span>
             </Button>
           </span>
         </Link>

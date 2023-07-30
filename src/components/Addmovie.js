@@ -150,7 +150,7 @@ const Addmovie = () => {
               <div class="p-2 w-full">
                 <button
                   onClick={btnclk}
-                  class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-900 rounded text-lg"
+                  class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-900 rounded text-lg"
                 >
                   {loader ? (
                     <ThreeDots color="white" height={30} width={30} />

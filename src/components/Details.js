@@ -32,7 +32,11 @@ const Details = () => {
           className="text-white top-1/4 -z-10 p-4 mt-4 flex w-full flex-col md:flex-row justify-center"
         >
           <div className="md:min-h-96 md:w-96 md:max-h-screen flex img md:float-right justify-center items-center text-center overflow-scroll  md:sticky -z-10 md:top-11">
-            <img className="h-full w-full" src={data.img} alt="img not found" />
+            <img
+              className="md:h-full h-4/5 w-4/5 md:w-full"
+              src={data.img}
+              alt="img not found"
+            />
           </div>
           <div className="w-full md:w-2/5">
             <div className="ml-4 w-full -z-20">
@@ -48,7 +52,7 @@ const Details = () => {
                 edit={true}
                 size={20}
               />
-              <p className="w-full DetailDiscription text-center overflow-scroll">
+              <p className="w-full md:DetailDiscription text-center overflow-scroll">
                 {data.description}
               </p>
             </div>

@@ -19,6 +19,7 @@ function App() {
     userName: "",
     mobile: "",
     password: "",
+    userid: "",
   });
   return (
     <user.Provider value={{ profile, SetProfile }}>

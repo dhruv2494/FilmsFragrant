@@ -2,13 +2,13 @@ import React, { useEffect, useState, useContext } from "react";
 import ReactStars from "react-stars";
 import { getDocs } from "firebase/firestore";
 import { user } from "../App";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Puff } from "react-loader-spinner";
 import { Moviedata } from "../firebase/Firebase";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CardTDetail from "./CardTDetail";
 const Cards = () => {
-  const Navigate=useNavigate()
+  const Navigate = useNavigate();
   const profile = useContext(user);
   const [data, Setdata] = useState([]);
   const [load, SetLoad] = useState(false);
@@ -37,7 +37,7 @@ const Cards = () => {
             <div className="w-full max-h-96 flex justify-center">
               <div
                 id="cimgh"
-                className="flex justify-center w-full md:w-1/2 h-96 rounded-xl bg-gray-900 items-center"
+                className="flex justify-center w-4/5 md:w-1/2 h-96 rounded-xl bg-gray-900 items-center"
               >
                 <Link to={`details/${simg.id}`}>
                   <CardTDetail h={simg} />
@@ -54,8 +54,8 @@ const Cards = () => {
                         document.getElementById("cimgh").style.display =
                           "block";
                       }}
-                      onDoubleClick={()=>{
-                        Navigate(`details/${e.id}`)
+                      onDoubleClick={() => {
+                        Navigate(`details/${e.id}`);
                       }}
                       key={i}
                       className="card w-40 bg-gray-900 font-medium transition-all duration-500 shadow-lg p-2 hover:-translate-y-3 cursor-pointer mt-6"

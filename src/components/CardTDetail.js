@@ -14,12 +14,12 @@ const CardTDetail = (h) => {
         className="w-full flex flex-row justify-center items-center"
       >
         <img
-          className=" h-80 w-1/2 md:w-auto  md:max-w-4/5 pt-5 m-5"
+          className=" h-80 w-1/2  md:max-w-4/5 pt-5 m-5"
           src={h.h.img}
           alt="img not found"
         />
         <div className="pl-3  flex flex-col items-start h-96 w-1/2">
-          <div className="mt-11 w-full">
+          <div className="mt-11 w-full h-full justify-start">
             <h1 className="text-4xl">
               {h.h.title} <span className="text-2xl">({h.h.year})</span>
             </h1>
@@ -28,10 +28,10 @@ const CardTDetail = (h) => {
               value={h.h.rating}
               half={true}
               edit={false}
-              size={55}
+              size={25}
             />
           </div>
-          <h4 id="thidden" className="w-full text-center md:mt-11 text-xl h-11">
+          <h4 id="thidden" className="w-full text-center md:mt-10 text-xl h-11">
             Tap To More Info
           </h4>
         </div>
