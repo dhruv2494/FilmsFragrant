@@ -30,7 +30,7 @@ const CardTDetail = (h) => {
               size={25}
             />
           </div>
-          <h4 id="thidden" className="w-full text-center md:mt-10 text-xl h-11">
+          <h4 hidden id="thidden" className="w-full text-center md:mt-10 text-xl h-11">
             Tap To More Info
           </h4>
         </div>
