@@ -170,19 +170,17 @@ const Review = (id) => {
             return (
               <div className="mb-3">
                 <div className="flex justify-between text-green-200">
-                  <h4>{e.Username}</h4>
                   <h4>{e.date}</h4>
-                  <div className="w-[100px] flex items-end float-right">
-                    <ReactStars
-                      className="w-full -z-10"
-                      value={e.rating}
-                      half={true}
-                      size={20}
-                    />
-                  </div>
+                  <ReactStars
+                    className="-z-10"
+                    value={e.rating}
+                    half={true}
+                    size={20}
+                  />
                 </div>
                 <div>
                   <p className="mb-1">{e.review}</p>
+                  <h4>{e.Username}</h4>
                 </div>
                 <hr />
               </div>
