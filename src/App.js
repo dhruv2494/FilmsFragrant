@@ -25,7 +25,7 @@ function App() {
     <user.Provider value={{ profile, SetProfile }}>
       <div className="App">
         <Header />
-        <div className="flex w-full flex-row justify-between">
+        <div className="flex w-full flex-row justify-center">
           <Sidebar />
           <div
             className="w-full"

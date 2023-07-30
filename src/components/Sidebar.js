@@ -12,16 +12,18 @@ const Sidebar = () => {
       id="udetail"
       className=" md:w-1/5 w-3/5 text-white h-screen sticky top-11 lpage pt-5 bg-gray-800"
     >
-      <div className=" flex justify-center text-center flex-col">
+      <div className=" flex text-lg justify-center text-center flex-col">
         <h1 className="text-xl">
           <AccountCircleIcon />
         </h1>
-        <h1 className="text-4xl mt-3">{profile.profile.userName}</h1>
+        <h1 className="md:text-4xl text-2xl mt-3">
+          {profile.profile.userName}
+        </h1>
         <h3 className="mt-5">
           <CallIcon /> <span>{profile.profile.mobile}</span>
         </h3>
         <Link to={"/"}>
-          <button className="w-full h-11 bg-gray-900 mt-2">Home</button>
+          <button className="w-full h-11 bg-gray-900  mt-2">Home</button>
         </Link>
         <Link to={"/Addmovie"}>
           <button className="w-full h-11 bg-gray-900 mt-2">
