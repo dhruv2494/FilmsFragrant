@@ -3,7 +3,6 @@ import ReactStars from "react-stars";
 const CardTDetail = (h) => {
   return (
     <div className="">
-      {/*  */}
       <div
         onMouseEnter={() => {
           document.getElementById("thidden").hidden = false;

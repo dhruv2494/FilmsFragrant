@@ -1,15 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
-import ReactStars from "react-stars";
 import { getDocs } from "firebase/firestore";
-import { user } from "../App";
 import { Link, useNavigate } from "react-router-dom";
 import { Puff } from "react-loader-spinner";
 import { Moviedata } from "../firebase/Firebase";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CardTDetail from "./CardTDetail";
 const Cards = () => {
   const Navigate = useNavigate();
-  const profile = useContext(user);
   const [data, Setdata] = useState([]);
   const [load, SetLoad] = useState(false);
   const [simg, setsimg] = useState({});

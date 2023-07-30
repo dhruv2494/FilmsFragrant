@@ -14,22 +14,17 @@ import {
   query,
   where,
 } from "firebase/firestore";
-import { Moviedata, Wishlistdata, Reviewdata, db } from "../firebase/Firebase";
+import { Wishlistdata, Reviewdata, db } from "../firebase/Firebase";
 import swal from "sweetalert";
-import Wishlist from "./Wishlist";
 const Review = (id) => {
   const profile = useContext(user);
   const Navigate = useNavigate();
   const [loader, Setloader] = useState(false);
-  const [di,setdi]=useState("");
+  const [di, setdi] = useState("");
   const [dep, setdep] = useState(true);
   const [review, setreview] = useState([]);
   const [load, SetLoad] = useState(false);
   const [wishlist_b, Setwishlist_b] = useState(false);
-  // const [wform, setwform] = useState({
-  //   mobile: `${profile.profile.mobile}`,
-  //   movieid: id.id,
-  // });
   const wform = {
     mobile: `${profile.profile.mobile}`,
     movieid: id.id,
@@ -51,7 +46,7 @@ const Review = (id) => {
       _d.forEach((doc) => {
         if (doc.data().movieid == id.id) {
           Setwishlist_b(true);
-          setdi(doc.id)
+          setdi(doc.id);
         }
       });
     }
@@ -73,9 +68,8 @@ const Review = (id) => {
   }, [dep]);
   async function Wishlist() {
     if (profile.profile.mobile != "") {
-      setdep(!dep)
+      setdep(!dep);
       if (wishlist_b) {
-        // for delet do
         await deleteDoc(doc(db, "wishlist", di));
         Setwishlist_b(false);
       } else {
@@ -145,7 +139,7 @@ const Review = (id) => {
             Setform({
               ...form,
               review: e.target.value,
-              date: new Date().toLocaleString()
+              date: new Date().toLocaleString(),
             })
           }
           placeholder="add your review"
@@ -178,13 +172,14 @@ const Review = (id) => {
                 <div className="flex justify-between text-green-200">
                   <h4>{e.Username}</h4>
                   <h4>{e.date}</h4>
-                  <ReactStars
-                    className="-z-10"
-                    value={e.rating}
-                    half={true}
-                    edit={true}
-                    size={20}
-                  />
+                  <div className="w-[100px] flex items-end float-right">
+                    <ReactStars
+                      className="w-full -z-10"
+                      value={e.rating}
+                      half={true}
+                      size={20}
+                    />
+                  </div>
                 </div>
                 <div>
                   <p className="mb-1">{e.review}</p>

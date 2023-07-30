@@ -76,7 +76,7 @@ const Signup = () => {
         } else {
           await requestOtp();
           await sett1(false);
-          setsmsg("Verify Otp")
+          setsmsg("Verify Otp");
         }
         Setloader(false);
       } else {
@@ -92,7 +92,7 @@ const Signup = () => {
             .then((result) => {
               sett2(false);
               Setloader(false);
-              setsmsg("Register Data")
+              setsmsg("Register Data");
             })
             .catch((error) => {
               console.log(error);
@@ -103,7 +103,7 @@ const Signup = () => {
           Setloader(false);
         }
       } else {
-        Setloader(true)
+        Setloader(true);
         await addDoc(Userdata, form);
         swal({
           text: "Sucessfully Registered",
@@ -111,7 +111,7 @@ const Signup = () => {
           buttons: false,
           timer: 3000,
         });
-        Setloader(false)
+        Setloader(false);
         Navigate("/login");
       }
     }
@@ -128,7 +128,6 @@ const Signup = () => {
                     onClick={() => {
                       Navigate("/login");
                     }}
-                    // className="bd"
                   >
                     <h1 className="m-2 text-xl">Login</h1>
                   </button>
@@ -139,7 +138,6 @@ const Signup = () => {
               </div>
             </h1>
           </div>
-          {/* <form> */}
           <div class="lg:w-1/2 md:w-2/3 mx-auto">
             <div className="text-red-500 flex justify-center text-center w-full">
               <h4 hidden id="hidden">
@@ -173,8 +171,6 @@ const Signup = () => {
                       class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                   </div>
-                  {/* </div>
-              <div class="p-2 w-full"> */}
                   <div class="relative">
                     <label for="message" class="leading-7 text-sm text-white">
                       Mobile No
@@ -291,7 +287,6 @@ const Signup = () => {
               </div>
             </div>
           </div>
-          {/* </form> */}
         </div>
       </section>
       <div id="sign-in-button"></div>

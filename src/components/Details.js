@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactStars from "react-stars";
-import { getDoc, doc, query, where } from "firebase/firestore";
+import { getDoc, doc} from "firebase/firestore";
 import { db } from "../firebase/Firebase";
 import { useParams } from "react-router-dom";
 import { Puff } from "react-loader-spinner";
@@ -40,7 +40,7 @@ const Details = () => {
           </div>
           <div className="w-full md:w-2/5">
             <div className="ml-4 w-full -z-20">
-              <h1 className="text-6xl text-gray-300">
+              <h1 className="md:text-6xl text-4xl mt-4 text-gray-300">
                 {data.title} <span className="text-4xl">({data.year})</span>
               </h1>
               <ReactStars
@@ -52,7 +52,7 @@ const Details = () => {
                 edit={true}
                 size={20}
               />
-              <p className="w-full md:DetailDiscription text-center overflow-scroll">
+              <p className="w-full md:DetailDiscription overflow-scroll">
                 {data.description}
               </p>
             </div>

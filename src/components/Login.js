@@ -29,7 +29,7 @@ const Login = () => {
       const _data = await getDocs(_q);
       _data.forEach((e) => {
         d = { ...e.data(), record: true, userid: e.id };
-        Setuid(e.id)
+        Setuid(e.id);
       });
       Setloader(false);
       if (d.record == false) {
@@ -68,7 +68,6 @@ const Login = () => {
             Setsmsg("Find Record");
             document.getElementById("passhidden").hidden = true;
           } else {
-            // document.getElementById("th").hidden = false;
           }
         }
       }
@@ -92,7 +91,6 @@ const Login = () => {
                       onClick={() => {
                         Navigate("/signup");
                       }}
-                      // className="bd"
                     >
                       <h1 className="m-2 text-xl">signup</h1>
                     </button>
@@ -197,7 +195,7 @@ const Login = () => {
           </div>
         </section>
       ) : (
-        <Forgotpassword mobile={mno} id={uid} setforgot={setforgot}/>
+        <Forgotpassword mobile={mno} id={uid} setforgot={setforgot} />
       )}
     </div>
   );
