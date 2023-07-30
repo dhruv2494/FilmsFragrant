@@ -132,7 +132,7 @@ const Review = (id) => {
           size={50}
           onChange={(e) => Setform({ ...form, rating: e })}
         />
-        <button className="text-green-500" onClick={Wishlist}>
+        <button className="text-orange-300" onClick={Wishlist}>
           {wishlist_b ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </button>
       </div>
@@ -152,7 +152,7 @@ const Review = (id) => {
         />
         <button
           onClick={reviewsent}
-          className="w-full h-9 text-white bg-green-400"
+          className="w-full h-9 text-white bg-orange-400"
         >
           {loader ? (
             <div className="w-full flex text-center justify-center">

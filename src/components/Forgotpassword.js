@@ -35,6 +35,12 @@ const Forgotpassword = (t) => {
         });
       })
       .catch((error) => {
+        swal({
+          text: "Invalid No or Password",
+          icon: "error",
+          buttons: false,
+          timer: 3000,
+        });
         console.log(error);
       });
   };

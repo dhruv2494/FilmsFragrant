@@ -110,7 +110,7 @@ const Login = () => {
                   </div>
                   <div class="relative">
                     <label for="Mobile no" class="leading-7 text-sm text-white">
-                      Mobile No
+                      Mobile No.
                     </label>
                     <input
                       type="number"
