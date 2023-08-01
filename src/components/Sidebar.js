@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { user } from "../App";
-import { Link, useNavigate } from "react-router-dom";
-import AddIcon from "@mui/icons-material/Add";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import CallIcon from "@mui/icons-material/Call";
+import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
   const profile = useContext(user);
   const Navigate = useNavigate();
@@ -22,7 +19,9 @@ const Sidebar = () => {
           }}
           className="w-full hover:bg-black mt-5"
         >
+          <hr />
           <h3 className="m-5 text-xl">Home</h3>
+          <hr />
         </div>
         <div
           onClick={() => {
@@ -33,6 +32,7 @@ const Sidebar = () => {
           className="w-full hover:bg-black mt-5"
         >
           <h3 className="m-5 text-xl">Add New Movie</h3>
+          <hr />
         </div>
         <div
           onClick={() => {
@@ -43,6 +43,7 @@ const Sidebar = () => {
           className="w-full hover:bg-black mt-5"
         >
           <h3 className="m-5 text-xl">WishList</h3>
+          <hr />
         </div>
         <div
           onClick={() => {
@@ -58,6 +59,7 @@ const Sidebar = () => {
           className="w-full hover:bg-black mt-5"
         >
           <h3 className="m-5 text-xl">Log out</h3>
+          <hr />
         </div>
       </div>
     </h1>

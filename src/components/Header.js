@@ -1,9 +1,6 @@
-import React, { useContext, useState } from "react";
-import { Button } from "@mui/material";
+import React, { useContext } from "react";
 import { user } from "../App";
 import { Link } from "react-router-dom";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import CloseIcon from "@mui/icons-material/Close";
 import ViewHeadlineIcon from "@mui/icons-material/ViewHeadline";
 import HeaderComponents from "./HeaderComponents";
 const Header = () => {
@@ -15,7 +12,6 @@ const Header = () => {
           <div className="  w-full flex justify-end text-3xl">
             <button className="rounded-md bg-gray-900 hover:bg-orange-400 text-center items-center justify-center flex">
               <span className="text-white text-xl m-2">Login</span>
-              {/* <span className="text-orange-500 ">Login</span> */}
             </button>
           </div>
         </Link>
