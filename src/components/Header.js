@@ -3,39 +3,37 @@ import { Button } from "@mui/material";
 import { user } from "../App";
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ViewHeadlineIcon from "@mui/icons-material/ViewHeadline";
+import HeaderComponents from "./HeaderComponents";
 const Header = () => {
   const profile = useContext(user);
   return (
-    <div className="text-blue-500 h-11 z-30 sticky top-0 bg-[#0C1A1A] text-3xl flex justify-between items-center font-bold p-3 border-b-2 border-gray-500">
-      
+    <div className="text-white h-[60px] z-30 sticky top-0 bg-[#121212] text-3xl flex justify-between items-center font-bold p-3 border-b-2 border-gray-500">
       {profile.profile.mobile == "" ? (
-        <Link to={"/login"}>
-          <span className=" rounded-md flex items-center text-3xl">
-            <Button>
-              <span className="text-orange-500 ">Login</span>
-            </Button>
-          </span>
+        <Link className="w-full" to={"/login"}>
+          <div className="  w-full flex justify-end text-3xl">
+            <button className="rounded-md bg-gray-900 hover:bg-orange-400 text-center items-center justify-center flex">
+              <span className="text-white text-xl m-2">Login</span>
+              {/* <span className="text-orange-500 ">Login</span> */}
+            </button>
+          </div>
         </Link>
       ) : (
-        <span className="text-green-600 flex items-center text-3xl">
-          <Button
+        <div className="w-full flex flex-row">
+          <div
+            className="md:hidden"
             onClick={() => {
               document.getElementById("udetail").hidden =
                 !document.getElementById("udetail").hidden;
             }}
           >
-            <AccountCircleIcon />
-          </Button>
-        </span>
-      )}<Link to={"/"}>
-      <span>
-        hello
-        <span className="text-white text-xl">
-          {" "}
-          <i>{profile.profile.mobile != "" ? `${profile.profile.userName}` : ""}</i>
-        </span>
-      </span>
-    </Link>
+            <ViewHeadlineIcon />
+          </div>
+          <div className="w-full hidden md:block">
+            <HeaderComponents />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

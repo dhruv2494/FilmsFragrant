@@ -33,7 +33,7 @@ const Cards = () => {
             <div className="w-full max-h-96 flex justify-center">
               <div
                 id="cimgh"
-                className="flex justify-center w-4/5 md:w-1/2 h-96 rounded-xl bg-gray-900 items-center"
+                className="flex justify-center w-full md:w-1/2 h-96 bg-[#1A1A1A] items-center"
               >
                 <Link to={`details/${simg.id}`}>
                   <CardTDetail h={simg} />
@@ -54,10 +54,10 @@ const Cards = () => {
                         Navigate(`details/${e.id}`);
                       }}
                       key={i}
-                      className="card w-40 bg-gray-900 font-medium transition-all duration-500 shadow-lg p-2 hover:-translate-y-3 cursor-pointer mt-6"
+                      className="card bg-[#1A1A1A] font-medium transition-all duration-500 shadow-lg p-2 hover:-translate-y-3 cursor-pointer mt-6"
                     >
                       <img
-                        className=" h-60 w-40 md:h-72"
+                        className=" h-60 md:h-72"
                         src={e.img}
                         alt="img not found"
                       />

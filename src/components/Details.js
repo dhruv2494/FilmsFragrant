@@ -31,9 +31,9 @@ const Details = () => {
           id="hii"
           className="text-white top-1/4 -z-10 p-4 mt-4 flex w-full flex-col md:flex-row justify-center"
         >
-          <div className="md:min-h-96 md:w-96 md:max-h-screen flex img md:float-right justify-center items-center text-center overflow-scroll  md:sticky -z-10 md:top-11">
+          <div className="md:min-h-96 md:w-96 md:max-h-[90vh] flex img md:float-right overflow-scroll  md:sticky -z-10 md:top-[65px]">
             <img
-              className="md:h-full h-4/5 w-4/5 md:w-full"
+              className="h-4/5 md:mr-4 md:w-full"
               src={data.img}
               alt="img not found"
             />

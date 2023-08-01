@@ -10,7 +10,7 @@ const Sidebar = () => {
     <h1
       hidden
       id="udetail"
-      className=" md:w-1/5 w-3/5 text-white h-screen sticky top-11 lpage pt-5 bg-gray-800"
+      className=" w-3/5 text-white h-screen sticky top-11 lpage pt-5 bg-gray-800"
     >
       <div className=" flex text-lg justify-center text-center flex-col">
         <h1 className="text-xl">
