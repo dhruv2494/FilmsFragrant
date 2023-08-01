@@ -10,17 +10,17 @@ import Sidebar from "./components/Sidebar";
 import { Routes, Route } from "react-router-dom";
 const user = createContext();
 function App() {
-  const [profile, SetProfile] = useState({
-    userName: "Dhruv Bhuva",
-    mobile: "7984395343",
-    password: "Dhruv@123",
-  });
   // const [profile, SetProfile] = useState({
-  //   userName: "",
-  //   mobile: "",
-  //   password: "",
-  //   userid: "",
+  //   userName: "Dhruv Bhuva",
+  //   mobile: "7984395343",
+  //   password: "Dhruv@123",
   // });
+  const [profile, SetProfile] = useState({
+    userName: "",
+    mobile: "",
+    password: "",
+    userid: "",
+  });
   return (
     <user.Provider value={{ profile, SetProfile }}>
       <div className="App w-full">

@@ -130,7 +130,7 @@ const Review = (id) => {
           {wishlist_b ? <FavoriteIcon /> : <FavoriteBorderIcon />}
         </button>
       </div>
-      <div className="flex flex-col sticky top-11">
+      <div className="flex flex-col sticky top-[65px]">
         <input
           className="w-full h-10 bg-gray-900 text-center outline-none"
           type="text"

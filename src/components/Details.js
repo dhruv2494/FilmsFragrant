@@ -44,12 +44,11 @@ const Details = () => {
                 {data.title} <span className="text-4xl">({data.year})</span>
               </h1>
               <ReactStars
-                className="-z-10"
+                className="-z-10 mt-2"
                 prevreating={data.rating}
                 rated={data.ratingcount}
                 value={data.rating}
                 half={true}
-                edit={true}
                 size={20}
               />
               <p className="w-full md:DetailDiscription overflow-scroll">

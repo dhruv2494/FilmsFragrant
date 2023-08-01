@@ -22,7 +22,7 @@ const Sidebar = () => {
           }}
           className="w-full hover:bg-black mt-5"
         >
-          <h3 className="m-5 text-3xl">Home</h3>
+          <h3 className="m-5 text-xl">Home</h3>
         </div>
         <div
           onClick={() => {
@@ -32,7 +32,7 @@ const Sidebar = () => {
           }}
           className="w-full hover:bg-black mt-5"
         >
-          <h3 className="m-5 text-3xl">Add New Movie</h3>
+          <h3 className="m-5 text-xl">Add New Movie</h3>
         </div>
         <div
           onClick={() => {
@@ -42,7 +42,7 @@ const Sidebar = () => {
           }}
           className="w-full hover:bg-black mt-5"
         >
-          <h3 className="m-5 text-3xl">WishList</h3>
+          <h3 className="m-5 text-xl">WishList</h3>
         </div>
         <div
           onClick={() => {
@@ -57,7 +57,7 @@ const Sidebar = () => {
           }}
           className="w-full hover:bg-black mt-5"
         >
-          <h3 className="m-5 text-3xl">Log out</h3>
+          <h3 className="m-5 text-xl">Log out</h3>
         </div>
       </div>
     </h1>
