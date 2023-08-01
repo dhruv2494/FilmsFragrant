@@ -1,40 +1,50 @@
 import React, { useContext } from "react";
 import { user } from "../App";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CallIcon from "@mui/icons-material/Call";
 const Sidebar = () => {
   const profile = useContext(user);
+  const Navigate = useNavigate();
   return (
     <h1
       hidden
       id="udetail"
-      className=" w-3/5 text-white h-screen sticky top-11 lpage pt-5 bg-gray-800"
+      className="w-full text-white z-40 absolute h-screen sticky top-11 lpage pt-5 bg-[#121212]"
     >
-      <div className=" flex text-lg justify-center text-center flex-col">
-        <h1 className="text-xl">
-          <AccountCircleIcon />
-        </h1>
-        <h1 className="md:text-4xl text-2xl mt-3">
-          {profile.profile.userName}
-        </h1>
-        <h3 className="mt-5">
-          <CallIcon /> <span>{profile.profile.mobile}</span>
-        </h3>
-        <Link to={"/"}>
-          <button className="w-full h-11 bg-gray-900  mt-2">Home</button>
-        </Link>
-        <Link to={"/Addmovie"}>
-          <button className="w-full h-11 bg-gray-900 mt-2">
-            <AddIcon color="secondary" />
-            <span>Add New</span>
-          </button>
-        </Link>
-        <Link to={"/user/wishlist"}>
-          <button className=" w-full h-11 bg-gray-900 mt-2">WishList</button>
-        </Link>
-        <button
+      <div className=" flex text-lg justify-start text-start flex-col">
+        <div
+          onClick={() => {
+            Navigate("/");
+            document.getElementById("udetail").hidden =
+              !document.getElementById("udetail").hidden;
+          }}
+          className="w-full hover:bg-black mt-5"
+        >
+          <h3 className="m-5 text-3xl">Home</h3>
+        </div>
+        <div
+          onClick={() => {
+            Navigate("/addmovie");
+            document.getElementById("udetail").hidden =
+              !document.getElementById("udetail").hidden;
+          }}
+          className="w-full hover:bg-black mt-5"
+        >
+          <h3 className="m-5 text-3xl">Add New Movie</h3>
+        </div>
+        <div
+          onClick={() => {
+            Navigate("/user/wishlist");
+            document.getElementById("udetail").hidden =
+              !document.getElementById("udetail").hidden;
+          }}
+          className="w-full hover:bg-black mt-5"
+        >
+          <h3 className="m-5 text-3xl">WishList</h3>
+        </div>
+        <div
           onClick={() => {
             profile.SetProfile({
               userName: "",
@@ -45,10 +55,10 @@ const Sidebar = () => {
             document.getElementById("udetail").hidden =
               !document.getElementById("udetail").hidden;
           }}
-          className=" w-full h-11 bg-gray-900 mt-2"
+          className="w-full hover:bg-black mt-5"
         >
-          Log Out
-        </button>
+          <h3 className="m-5 text-3xl">Log out</h3>
+        </div>
       </div>
     </h1>
   );

@@ -10,23 +10,25 @@ import Sidebar from "./components/Sidebar";
 import { Routes, Route } from "react-router-dom";
 const user = createContext();
 function App() {
-  // const [profile, SetProfile] = useState({
-  //   userName: "Dhruv Bhuva",
-  //   mobile: "7984395343",
-  //   password: "Dhruv@123",
-  // });
   const [profile, SetProfile] = useState({
-    userName: "",
-    mobile: "",
-    password: "",
-    userid: "",
+    userName: "Dhruv Bhuva",
+    mobile: "7984395343",
+    password: "Dhruv@123",
   });
+  // const [profile, SetProfile] = useState({
+  //   userName: "",
+  //   mobile: "",
+  //   password: "",
+  //   userid: "",
+  // });
   return (
     <user.Provider value={{ profile, SetProfile }}>
-      <div className="App">
+      <div className="App w-full">
         <Header />
-        <div className="flex w-full flex-row justify-center">
-          <Sidebar />
+        <div className="flex w-full flex-row justify-center relative">
+          <div className="absolute w-[70%] left-0">
+            <Sidebar />
+          </div>
           <div
             className="w-full"
             onClick={() => {

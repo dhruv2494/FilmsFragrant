@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "@mui/material";
 import { user } from "../App";
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import CloseIcon from "@mui/icons-material/Close";
 import ViewHeadlineIcon from "@mui/icons-material/ViewHeadline";
 import HeaderComponents from "./HeaderComponents";
 const Header = () => {
