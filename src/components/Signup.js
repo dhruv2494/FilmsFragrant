@@ -6,7 +6,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import {
   getAuth,
   RecaptchaVerifier,
-  signInWithPhoneNumber,
+  signInWithPhoneNumber
 } from "firebase/auth";
 import app from "../firebase/Firebase";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
