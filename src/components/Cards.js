@@ -33,8 +33,15 @@ const Cards = () => {
             <div className="w-full max-h-96 flex justify-center">
               <div
                 id="cimgh"
-                className="flex justify-center w-full md:w-1/2 h-96 bg-[#1A1A1A] items-center"
+                className="flex justify-center relative w-full md:w-1/2 h-96 bg-[#1A1A1A] items-center"
               >
+                <h4
+                  hidden
+                  id="thidden"
+                  className="w-full text-center absolute text-xl h-11"
+                >
+                  Tap To See All Review
+                </h4>
                 <Link to={`details/${simg.id}`}>
                   <CardTDetail h={simg} />
                 </Link>

@@ -2,13 +2,15 @@ import React from "react";
 import ReactStars from "react-stars";
 const CardTDetail = (h) => {
   return (
-    <div className="">
+    <div id="kk" className="opacity-100">
       <div
         onMouseEnter={() => {
           document.getElementById("thidden").hidden = false;
+          document.getElementById("kk").style.opacity = "0.8";
         }}
         onMouseLeave={() => {
           document.getElementById("thidden").hidden = true;
+          document.getElementById("kk").style.opacity = "1";
         }}
         className="w-full flex flex-row justify-center items-center"
       >
@@ -18,7 +20,7 @@ const CardTDetail = (h) => {
           alt="img not found"
         />
         <div className="pl-3  flex flex-col items-start h-96 w-1/2">
-          <div className="mt-11 w-full h-full justify-start">
+          <div className="mt-11 w-full flex flex-col h-full justify-start">
             <h1 className="text-4xl">
               {h.h.title} <span className="text-2xl">({h.h.year})</span>
             </h1>
@@ -29,10 +31,15 @@ const CardTDetail = (h) => {
               edit={false}
               size={25}
             />
+            <h4 className="w-full mt-5 h-[50%] overflow-scroll ">{h.h.description}</h4>
           </div>
-          <h4 hidden id="thidden" className="w-full text-center md:mt-10 text-xl h-11">
+          {/* <h4
+            hidden
+            id="thidden"
+            className="w-full text-center md:mt-10 text-xl h-11"
+          >
             Tap To More Info
-          </h4>
+          </h4> */}
         </div>
       </div>
     </div>
