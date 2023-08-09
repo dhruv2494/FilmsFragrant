@@ -31,7 +31,7 @@ const CardTDetail = (h) => {
               edit={false}
               size={25}
             />
-            <h4 className="w-full mt-5 h-[50%] overflow-scroll ">{h.h.description}</h4>
+            <h4 className="w-full mt-5 h-[30%] overflow-scroll ">{h.h.description}</h4>
           </div>
           {/* <h4
             hidden

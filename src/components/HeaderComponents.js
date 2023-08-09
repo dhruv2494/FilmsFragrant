@@ -7,7 +7,7 @@ const HeaderComponents = () => {
   return (
     <div className="justify-center flex w-full">
       <div className="w-full text-white flex text-lg  flex-row justify-end text-center items-center">
-        <div className="m-3">
+        {/* <div className="m-3">
           <button
             onClick={() => {
               Navigate("/");
@@ -16,7 +16,7 @@ const HeaderComponents = () => {
           >
             Home
           </button>
-        </div>
+        </div> */}
         <div className="m-3">
           <button
             onClick={() => {
