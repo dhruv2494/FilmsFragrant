@@ -118,16 +118,24 @@ const Addmovie = () => {
                   <label for="message" class="leading-7 text-sm text-white">
                     Image Link
                   </label>
-                  <textarea
+                  <input
+                    type="file"
                     id="imglink"
-                    value={form.img}
                     onClick={() => {
                       document.getElementById("movhidden").hidden = true;
                     }}
-                    onChange={(e) => Setform({ ...form, img: e.target.value })}
+                    onChange={(e) => {
+                      const reader = new FileReader();
+
+                      reader.readAsDataURL(e.target.files[0]);
+
+                      reader.onload = () => {
+                        Setform({ ...form, img: reader.result });
+                      };
+                    }}
                     name="img"
                     class="w-full h-11 bg-white rounded border border-gray-300 focus:border-indigo-500    focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  ></textarea>
+                  ></input>
                 </div>
                 <div class="relative">
                   <label for="message" class="leading-7 text-sm text-white">
