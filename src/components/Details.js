@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactStars from "react-stars";
-import { getDoc, doc} from "firebase/firestore";
+import { getDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/Firebase";
 import { useParams } from "react-router-dom";
 import { Puff } from "react-loader-spinner";

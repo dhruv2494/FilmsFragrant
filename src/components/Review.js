@@ -180,7 +180,9 @@ const Review = (id) => {
                 </div>
                 <div>
                   <p className="mb-1">{e.review}</p>
-                  <h4 className="flex justify-end text-green-200">{e.Username}</h4>
+                  <h4 className="flex justify-end text-green-200">
+                    {e.Username}
+                  </h4>
                 </div>
                 <hr />
               </div>

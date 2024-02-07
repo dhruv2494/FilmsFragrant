@@ -56,6 +56,7 @@ const Login = () => {
             timer: 2000,
           });
           Navigate("/");
+          localStorage.setItem("Profile", JSON.stringify(d));
         } else {
           if (tpass != "") {
             swal({

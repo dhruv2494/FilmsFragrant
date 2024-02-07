@@ -56,6 +56,7 @@ const Cards = () => {
                         setsimg(e);
                         document.getElementById("cimgh").style.display =
                           "block";
+                        window.scrollTo(0, 0);
                       }}
                       onDoubleClick={() => {
                         Navigate(`details/${e.id}`);

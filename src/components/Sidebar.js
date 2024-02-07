@@ -53,6 +53,7 @@ const Sidebar = () => {
               password: "",
               userid: "",
             });
+            localStorage.removeItem("Profile");
             document.getElementById("udetail").hidden =
               !document.getElementById("udetail").hidden;
           }}

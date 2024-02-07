@@ -46,6 +46,7 @@ const HeaderComponents = () => {
                 password: "",
                 userid: "",
               });
+              localStorage.removeItem("Profile");
             }}
             className="underlineAnimation"
           >

@@ -15,12 +15,18 @@ function App() {
   //   mobile: "7984395343",
   //   password: "Dhruv@123",
   // });
-  const [profile, SetProfile] = useState({
-    userName: "",
-    mobile: "",
-    password: "",
-    userid: "",
-  });
+  const [profile, SetProfile] = useState(
+    localStorage.getItem("Profile") === null
+      ? {
+          userName: "",
+          mobile: "",
+          password: "",
+          userid: "",
+        }
+      : localStorage.getItem("Profile")
+  );
+
+  // console.log(, "lll");
   return (
     <user.Provider value={{ profile, SetProfile }}>
       <div className="App w-full">
