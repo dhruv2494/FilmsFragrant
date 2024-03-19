@@ -88,22 +88,31 @@ const Review = (id) => {
   }
   const reviewsent = async () => {
     if (profile.profile.mobile != "") {
-      Setloader(true);
-      await addDoc(Reviewdata, form);
-      swal({
-        title: "Thank You",
-        icon: "success",
-        buttons: false,
-        timer: 2000,
-      });
-      Setform({ ...form, review: "" });
-      Setloader(false);
-      setdep(!dep);
-      if (form.rating != 0) {
-        await updateDoc(doc(db, "movie", id.id), {
-          rating:
-            (id.rating * id.ratingcount + form.rating) / (id.ratingcount + 1),
-          ratingcount: id.ratingcount + 1,
+      if (form.review != "") {
+        Setloader(true);
+        await addDoc(Reviewdata, form);
+        swal({
+          title: "Thank You",
+          icon: "success",
+          buttons: false,
+          timer: 2000,
+        });
+        Setform({ ...form, review: "" });
+        Setloader(false);
+        setdep(!dep);
+        if (form.rating != 0) {
+          await updateDoc(doc(db, "movie", id.id), {
+            rating:
+              (id.rating * id.ratingcount + form.rating) / (id.ratingcount + 1),
+            ratingcount: id.ratingcount + 1,
+          });
+        }
+      } else {
+        swal({
+          title: "Plz Write Review",
+          icon: "error",
+          buttons: false,
+          timer: 2000,
         });
       }
     } else {
